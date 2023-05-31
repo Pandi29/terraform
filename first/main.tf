@@ -26,3 +26,7 @@ resource "aws_ec2_instance_state" "test" {
   instance_id = aws_instance.web.id
   state       = "stopped"
 }
+
+output "s3_name" {
+  value = data.terraform_remote_state.output_as.outputs.S3_ARN  
+}
