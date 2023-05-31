@@ -2,15 +2,19 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 4.0"
+      version = "~>4.2"
+
+    }
+    newrelic = {
+      source = "newrelic/newrelic"
     }
   }
-  #required_version = "1.3.1"
+  required_version = "1.4.6"
 }
 
 provider "aws" {
 
- region = "us-east-1"
- shared_credentials_files = ["d:/aws/credentials/credentials.txt"]
- profile = "raja"
+  region = "us-east-1"
+  shared_credentials_files = ["d:/aws/credentials/credentials.txt"]
+  profile = "raja"
 }
